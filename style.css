@@ -1,0 +1,219 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: #14213d;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #fca311;
+}
+
+/* Hero Section */
+.hero {
+    height: 450px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fca311;
+    color: #14213d;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+/* About Section */
+.about {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    color: #14213d;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Services Section */
+.services {
+    background-color: #f4f4f4;
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 30px;
+    color: #14213d;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-box {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-box h3 {
+    color: #fca311;
+    margin-bottom: 15px;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* Footer Section */
+footer {
+    background-color: #14213d;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h2 {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+.copyright {
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 15px;
+}
+
+/* Tablet Responsive Design */
+@media screen and (max-width: 900px) {
+
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .hero {
+        height: 350px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about,
+    .services {
+        padding: 35px 20px;
+    }
+
+    footer {
+        padding: 25px 15px;
+    }
+}
